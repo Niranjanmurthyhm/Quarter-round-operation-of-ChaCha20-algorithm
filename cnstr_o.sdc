@@ -1,0 +1,7 @@
+create_clock -name CLK -period 10 [get_ports {clk}]
+set_input_delay 2 -clock CLK [get_ports {reset_n}]
+set_input_delay 2 -clock CLK [get_ports {cs}]
+set_input_delay 2 -clock CLK [get_ports {we}]
+set_input_delay 2 -clock CLK [get_ports {addr}]
+set_input_delay 2 -clock CLK [get_ports {write_data}]
+set_output_delay 2 -clock CLK [get_ports {read_data}]
